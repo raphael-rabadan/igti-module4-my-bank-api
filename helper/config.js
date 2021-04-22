@@ -34,7 +34,7 @@ const connectToDatabase = async () => {
 }
 
 const startServer = async () => {
-  const API_PORT = process.env.API_PORT
+  const API_PORT = process.env.PORT
 
   const app = express()
   app.use(express.json())
