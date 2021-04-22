@@ -2,7 +2,7 @@ import logger from './logger.js'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import express from 'express'
-//import cors from 'cors'
+import cors from 'cors'
 import accountRouter from './../routes/account.js'
 //import { handlerStatic } from './../handler/static.js'
 
@@ -38,7 +38,7 @@ const startServer = async () => {
 
   const app = express()
   app.use(express.json())
-  //app.use(cors())
+  app.use(cors())
   //app.use(handlerStatic, express.static('public'))
   app.use(express.static('public'))
   app.use('/account', accountRouter)
