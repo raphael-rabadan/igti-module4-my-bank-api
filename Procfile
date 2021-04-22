@@ -1,1 +1,1 @@
-web: yarn start -r dotenv/config --experimental-modules index.js
+web: yarn start-heroku
